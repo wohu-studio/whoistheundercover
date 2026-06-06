@@ -19,6 +19,9 @@ COPY frontend/ ./frontend/
 # Build
 RUN npm run build
 
+# Copy shared compiled output to shared root so require("../../../shared/events") resolves
+RUN cp -r /app/shared/dist/* /app/shared/
+
 # Production image
 FROM node:20-slim
 
