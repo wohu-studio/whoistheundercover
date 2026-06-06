@@ -8,7 +8,7 @@
     "dev:frontend": "cd frontend && npm run dev",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
-    "build": "cd backend && npx tsc --build ../shared/tsconfig.json && cd ../frontend && npm run build && cd ../backend && npm run build",
+    "build": "cd backend && ./node_modules/.bin/tsc --build ../shared/tsconfig.json && cd ../frontend && npm run build && cd ../backend && npm run build",
     "start": "cd backend && node dist/index.js",
     "install:all": "cd shared && npm install && cd ../backend && npm install && cd ../frontend && npm install"
   },
