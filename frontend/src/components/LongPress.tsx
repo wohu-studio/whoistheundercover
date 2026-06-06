@@ -10,7 +10,7 @@ interface LongPressProps {
 export function LongPress({ children, onReveal, duration = 1500, className = '' }: LongPressProps) {
   const [isRevealed, setIsRevealed] = useState(false);
   const [isHolding, setIsHolding] = useState(false);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const handleStart = () => {
     setIsHolding(true);

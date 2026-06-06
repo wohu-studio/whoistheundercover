@@ -282,20 +282,6 @@ export function GameplayView() {
   const getPlayerName = (id: string): string =>
     players.find(p => p.id === id)?.nickname || id;
 
-  const handleTouchStart = () => {
-    const timer = setTimeout(() => {
-      setSecretRevealed(true);
-      if (navigator.vibrate) navigator.vibrate(50);
-    }, 300);
-    setHoldTimer(timer);
-  };
-
-  const handleTouchEnd = () => {
-    if (holdTimer) clearTimeout(holdTimer);
-    setHoldTimer(null);
-    setSecretRevealed(false);
-  };
-
   // RESULT phase
   if (gi.phase === "RESULT") {
     const winInfo = getWinnerText(gi.winner, gi.type);
