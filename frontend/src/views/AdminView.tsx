@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { DesertButton } from "../components/DesertButton";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5050";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "";
 
 interface RoomInfo {
   id: string;

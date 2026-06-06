@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import { createServer } from "http";
 import { setupSocketIO } from "./socket";
 import { RoomManager } from "./room-manager";
@@ -90,10 +91,19 @@ app.get("/api/rooms", async (req, res) => {
   res.json(rooms);
 });
 
+// Serve frontend static files in production
+const frontendDist = path.join(__dirname, "../../frontend/dist");
+app.use(express.static(frontendDist));
+
+// SPA fallback — serve index.html for all non-API routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendDist, "index.html"));
+});
+
 // Start server
 httpServer.listen(PORT, () => {
-  console.log(`Sandcastle backend server running on port ${PORT}`);
-  console.log(`Socket.io server ready`);
+  console.log(`Sandcastle server running on port ${PORT}`);
+  console.log(`Serving frontend from ${frontendDist}`);
 });
 
 export { app, httpServer, io, roomManager };

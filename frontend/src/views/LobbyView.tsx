@@ -7,7 +7,7 @@ import { PlayerCard } from "../components/PlayerCard";
 import { GameTypeEnum } from "@shared/types/enums";
 import { RoomConfig } from "@shared/types/room";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5050";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "";
 
 interface WordPair {
   A: string;

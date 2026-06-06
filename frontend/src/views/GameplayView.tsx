@@ -103,6 +103,20 @@ export function GameplayView() {
   const [secretRevealed, setSecretRevealed] = useState(false);
   const [holdTimer, setHoldTimer] = useState<ReturnType<typeof setTimeout> | null>(null);
 
+  const handleTouchStart = () => {
+    const timer = setTimeout(() => {
+      setSecretRevealed(true);
+      if (navigator.vibrate) navigator.vibrate(50);
+    }, 300);
+    setHoldTimer(timer);
+  };
+
+  const handleTouchEnd = () => {
+    if (holdTimer) clearTimeout(holdTimer);
+    setHoldTimer(null);
+    setSecretRevealed(false);
+  };
+
   if (!room || !currentPlayer || !gameState) {
     return (
       <div className="min-h-screen flex items-center justify-center">

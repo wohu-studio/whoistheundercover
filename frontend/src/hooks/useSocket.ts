@@ -4,7 +4,7 @@ import { GameEvents, VoteWarningPayload } from "@shared/events";
 import { Room, RoomConfig } from "@shared/types/room";
 import { GameTypeEnum } from "@shared/types/enums";
 
-const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "http://localhost:5050";
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || "";
 
 // Singleton state to persist across navigation
 let globalSocket: Socket | null = null;
