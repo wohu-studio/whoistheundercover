@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev:backend": "cd backend && npm run dev",
-    "dev:frontend": "cd frontend && VITE_SOCKET_URL=http://localhost:5050 npm run dev",
+    "dev:frontend": "cd frontend && npm run dev",
     "build:backend": "cd backend && npm run build",
     "build:frontend": "cd frontend && npm run build",
     "build": "cd backend && npx tsc --build ../shared/tsconfig.json && cd ../frontend && npm run build && cd ../backend && npm run build",
