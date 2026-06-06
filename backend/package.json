@@ -1,0 +1,27 @@
+{
+  "name": "sandcastle-backend",
+  "version": "1.0.0",
+  "description": "Sandcastle game platform backend",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "kill": "lsof -ti :5050 | xargs kill -9 2>/dev/null && echo 'Port 5050 cleared' || echo 'Port 5050 already free'",
+    "start": "node dist/index.js",
+    "test:socket": "node test-socket.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.0",
+    "socket.io-client": "^4.7.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.3.3"
+  }
+}

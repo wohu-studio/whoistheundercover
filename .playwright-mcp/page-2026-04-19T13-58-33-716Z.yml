@@ -1,0 +1,14 @@
+- generic [ref=e4]:
+  - generic [ref=e5]:
+    - heading "🏰 Sandcastle" [level=1] [ref=e6]
+    - paragraph [ref=e7]: 选择游戏或加入房间
+  - generic [ref=e8]:
+    - generic [ref=e9]:
+      - generic [ref=e10]: 创建房间
+      - generic [ref=e11]:
+        - button "谁是卧底" [ref=e12] [cursor=pointer]
+        - button "任务狼人杀" [ref=e13] [cursor=pointer]
+    - generic [ref=e14]:
+      - generic [ref=e15]: 加入房间
+      - textbox "请输入房间号" [ref=e16]
+      - button "进入房间" [disabled] [ref=e17]

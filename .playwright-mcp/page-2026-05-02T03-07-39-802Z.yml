@@ -1,0 +1,56 @@
+- generic [ref=e13]:
+  - generic [ref=e14]:
+    - generic [ref=e15]:
+      - 'heading "房间: EV4PCK" [level=2] [ref=e16]'
+      - paragraph [ref=e17]: "游戏: 谁是卧底"
+    - generic [ref=e18]:
+      - button "开始游戏" [disabled] [ref=e19]
+      - button "分享房间" [ref=e20] [cursor=pointer]
+    - generic [ref=e21]: 至少需要 3 名玩家（当前 1 人）
+  - generic [ref=e22]:
+    - heading "游戏设置" [level=3] [ref=e23]
+    - generic [ref=e24]:
+      - generic [ref=e25]: 房主参与游戏
+      - button [ref=e26] [cursor=pointer]
+    - generic [ref=e28]:
+      - generic [ref=e29]: 卧底人数
+      - generic [ref=e30]:
+        - button "-" [disabled] [ref=e31]
+        - generic [ref=e32]: "1"
+        - button "+" [disabled] [ref=e33]
+    - paragraph [ref=e34]: 当前 1 人游戏，最多 1 名卧底
+    - generic [ref=e35]:
+      - generic [ref=e36]: 卧底词语
+      - generic [ref=e37]:
+        - generic [ref=e38] [cursor=pointer]:
+          - radio "相同词语" [checked] [ref=e39]
+          - generic [ref=e40]: 相同词语
+        - generic [ref=e41] [cursor=pointer]:
+          - radio "空白卡 (无词语)" [ref=e42]
+          - generic [ref=e43]: 空白卡 (无词语)
+    - generic [ref=e44]:
+      - generic [ref=e45]: 词语分类
+      - generic [ref=e46]:
+        - button "全部" [ref=e47] [cursor=pointer]
+        - button "美食饮品 (20)" [ref=e48] [cursor=pointer]
+        - button "水果蔬菜 (10)" [ref=e49] [cursor=pointer]
+        - button "科技互联网 (10)" [ref=e50] [cursor=pointer]
+        - button "游戏数码 (7)" [ref=e51] [cursor=pointer]
+        - button "明星名人 (9)" [ref=e52] [cursor=pointer]
+        - button "动漫角色 (10)" [ref=e53] [cursor=pointer]
+        - button "经典文学 (12)" [ref=e54] [cursor=pointer]
+        - button "历史人物 (12)" [ref=e55] [cursor=pointer]
+        - button "生活娱乐 (10)" [ref=e56] [cursor=pointer]
+        - button "交通出行 (7)" [ref=e57] [cursor=pointer]
+        - button "职场学校 (10)" [ref=e58] [cursor=pointer]
+        - button "穿搭时尚 (8)" [ref=e59] [cursor=pointer]
+        - button "动物自然 (9)" [ref=e60] [cursor=pointer]
+        - button "居家日用 (8)" [ref=e61] [cursor=pointer]
+        - button "热梗潮流 (8)" [ref=e62] [cursor=pointer]
+  - generic [ref=e63]:
+    - heading "玩家 (1)" [level=3] [ref=e64]
+    - generic [ref=e69]:
+      - img [ref=e72] [cursor=pointer]
+      - generic [ref=e80]:
+        - generic [ref=e81]: Admin(点击头像编辑)
+        - generic [ref=e82]: 房主

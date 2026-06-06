@@ -1,0 +1,6 @@
+- generic [ref=e5]:
+  - heading "创建房间" [level=2] [ref=e6]
+  - generic [ref=e7]:
+    - generic [ref=e8]: 你的昵称
+    - textbox "请输入你的昵称" [ref=e9]
+  - button "连接中..." [disabled] [ref=e10]
