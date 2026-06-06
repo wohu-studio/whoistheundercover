@@ -102,7 +102,7 @@ app.get("*", (req, res) => {
 
 // Start server
 httpServer.listen(PORT, () => {
-  console.log(`Sandcastle server running on port ${PORT}`);
+  console.log(`Overcover server running on port ${PORT}`);
   console.log(`Serving frontend from ${frontendDist}`);
 });
 
