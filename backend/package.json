@@ -1,7 +1,7 @@
 {
-  "name": "overcover-backend",
+  "name": "overload-backend",
   "version": "1.0.0",
-  "description": "Overcover game platform backend",
+  "description": "Overload game platform backend",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",

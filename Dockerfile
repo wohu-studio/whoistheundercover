@@ -1,23 +1,26 @@
 FROM node:20-slim AS build
 
+RUN corepack enable && corepack prepare pnpm@10.33.0 --activate
+
 WORKDIR /app
 
-# Copy package files
-COPY package.json ./
-COPY shared/ ./shared/
-COPY backend/package.json backend/package-lock.json ./backend/
-COPY frontend/package.json frontend/package-lock.json ./frontend/
+# Copy workspace config and package files
+COPY package.json pnpm-workspace.yaml pnpm-lock.yaml ./
+COPY shared/package.json ./shared/
+COPY backend/package.json ./backend/
+COPY frontend/package.json ./frontend/
 
-# Install all dependencies (including devDeps for build)
-RUN cd backend && npm ci && cd ../frontend && npm ci
+# Install all dependencies
+RUN pnpm install --frozen-lockfile
 
 # Copy source
 COPY docs/ ./docs/
+COPY shared/ ./shared/
 COPY backend/ ./backend/
 COPY frontend/ ./frontend/
 
 # Build
-RUN npm run build
+RUN pnpm run build
 
 # Copy shared compiled output to shared root so require("../../../shared/events") resolves
 RUN cp -r /app/shared/dist/* /app/shared/
@@ -39,4 +42,4 @@ EXPOSE 8080
 ENV PORT=8080
 ENV NODE_ENV=production
 
-CMD ["npm", "start"]
+CMD ["node", "backend/dist/index.js"]
